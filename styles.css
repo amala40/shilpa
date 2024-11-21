@@ -1,0 +1,212 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: start;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Main Grid Section */
+.grid-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Text section is wider than the image */
+    align-items: center;
+    height: 600px; /* Tall section */
+    position: relative;
+    overflow: hidden; /* Prevent image overflow */
+}
+
+/* Image Styling */
+.image-box {
+    width: 100%; /* Fit the grid column */
+    height: 100%; /* Fit the grid row */
+    object-fit: cover; /* Prevent distortion */
+    z-index: 1;
+    max-width: 100%; /* Ensure image never overflows the grid */
+}
+
+/* Background colors for text */
+.text-bg-light {
+    background-color: #f5f5f5; /* Light grey */
+}
+
+.text-bg-blue {
+    background-color: #87cefa; /* Light blue */
+}
+
+/* Swapped Layout Styling */
+.swapped {
+    grid-template-columns: 2fr 3fr; /* Switch placement */
+}
+
+/* Text Box Styling */
+.text-box {
+    padding: 40px;
+    z-index: 2; /* Ensure content appears on top */
+}
+
+.text-box h1 {
+    font-size: 36px;
+}
+
+.text-box p {
+    font-size: 1.25rem;
+}
+/* Footer Grid Layout */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns for Contact and About Us */
+    grid-template-rows: auto auto; /* Auto row heights for content */
+    gap: 10px; /* Space between sections */
+    background-color: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    width: 50%; /* Reduces the width of the footer to bring sections even closer */
+    margin: 0 auto; /* Centers the footer horizontally */
+}
+
+/* Specific Section Styling */
+.contact, .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from top to bottom */
+    align-items: flex-start;
+    row-gap: 5px; /* Reduce space between h2 and p */
+}
+
+/* Align the h2 and p elements vertically in the same height alignment */
+.contact h2, .about h2 {
+    margin: 0;
+    height: 100%; /* Allow h2 to stretch the full height of its container */
+}
+
+.contact p, .about p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Copyright section */
+.copyright {
+    grid-column: 1 / -1; /* Makes the copyright span across both columns */
+    text-align: center;
+    font-size: 0.875rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Styling for Heading and Paragraph */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduce space between h2 and p */
+}
+
+p {
+    font-size: 1.25rem;
+    color: #333;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: 1fr; /* Collapse into one column */
+        height: auto; /* Let height adjust naturally */
+    }
+
+    .text-box {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .image-box {
+        height: auto; /* Allow image to adjust naturally */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+}
