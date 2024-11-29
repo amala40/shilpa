@@ -49,7 +49,6 @@ table {
     box-sizing: border-box;
 }
 
-/* Header */
 header {
     display: grid;
     grid-template-columns: 1fr;
@@ -64,14 +63,14 @@ header {
 }
 
 h1 a{
-    font-size: 3rem;
+    font-size: 140px;
     font-weight: bold;
     color: #a29483;
     text-decoration: none;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 140px;
     font-weight: bold;
 }
 
@@ -90,7 +89,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: #a29483;
-    font-size: 1.25rem;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -108,7 +107,6 @@ body {
 .grid-section {
     display: grid;
     grid-template-columns: 3fr 2fr; 
-    align-items: center;
     height: 600px; 
     position: relative;
     overflow: hidden; 
@@ -139,13 +137,13 @@ body {
     z-index: 2; 
 }
 
-.text-box h1 {
-    font-size: 36px;
+.text-box h2 {
+    font-size: 70px;
     color: #1c0104;
 }
 
 .text-box p {
-    font-size: 1.25rem;
+    font-size: 50px;
     color: #1c0104;
 }
 
@@ -162,7 +160,7 @@ footer {
   }
   
   section {
-    font-size: 16px;
+    font-size: 70px;
     color: #a29483;
     line-height: 1.5;
   }
@@ -172,40 +170,28 @@ footer {
     grid-column: 1 / span 2; /* Span across both columns */
     text-align: center;
     padding: 2rem;
-    font-size: 14px;
+    font-size: 40px;
     color:#a29483;
   }
 
   footer p{
-    font-size: 1rem;
+    font-size: 30px;
   }
 
  
 /* Styling for Heading and Paragraph */
 h2 {
-    font-size: 2rem;
+    font-size: 70px;
     font-weight: bold;
     margin-bottom: 5px; /* Reduce space between h2 and p */
     color: #a29483;
 }
 
 p {
-    font-size: 1.25rem;
+    font-size: 3rem;
     color: #a29483;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
-    .grid-section {
-        grid-template-columns: 1fr; /* Collapse into one column */
-        height: auto; /* Let height adjust naturally */
-    }
 
-    .text-box {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-
-    .image-box {
-        height: auto; /* Allow image to adjust naturally */
-        object-fit: cover; /* Maintain aspect ratio */
-    }
+small{
+    font-size: 1rem;
 }
